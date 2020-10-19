@@ -1,0 +1,33 @@
+{
+	"name": "migdrp-request-looper",
+	"version": "1.0.0",
+	"description": "Esta aplicación genera requests en bucle a otras aplicaciones y estas le responden ",
+	"main": "server/server.js",
+	"engines": {
+		"node": "12.x",
+		"npm": "6.x"
+	},
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"nodemonConfig": {
+		"env": {
+			"NODE_ENV": "development",
+			"PORT": "2503"
+		},
+		"prod": {
+			"NODE_ENV": "production",
+			"PORT": "2503"
+		}
+	},
+	"scripts": {
+		"start": "set NODE_ENV=production&& node server/server.js"
+	},
+	"author": "Miguel David Rebolledo Pérez <mig_drp@hotmail.com>",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"devDependencies": {
+		"@types/express": "^4.17.7",
+		"@types/node": "^14.6.0",
+		"typescript": "^3.9.7"
+	}
+}
