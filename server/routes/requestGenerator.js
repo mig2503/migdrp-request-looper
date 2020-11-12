@@ -18,6 +18,6 @@ function createRequest() {
     req.end();
     setTimeout(() => {
         createRequest();
-    }, 900000);
+    }, 90000);
 }
 exports.createRequest = createRequest;
