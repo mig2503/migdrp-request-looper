@@ -21,6 +21,8 @@ const requestGenerator_1 = require("./routes/requestGenerator");
 const app = express_1.default();
 const PORT = process.env.PORT || 2503;
 let server = require("http").Server(app);
+const bonobotUrl = process.env.BONOBOT_URI;
+const flotaUrl = process.env.FLOTA_URI;
 console.log('La aplicación está corriendo en el entorno: <<< ' + process.env.NODE_ENV + ' >>>');
 const initServer = () => __awaiter(void 0, void 0, void 0, function* () {
     app.use(body_parser_1.default.json());
@@ -31,7 +33,8 @@ const initServer = () => __awaiter(void 0, void 0, void 0, function* () {
     else if (process.env.NODE_ENV === 'development') {
     }
     app.use('/', globalRouter_1.default);
-    requestGenerator_1.createRequest();
+    requestGenerator_1.createRequest(bonobotUrl);
+    requestGenerator_1.createRequest(flotaUrl);
     server.listen(PORT, () => {
         console.log(`La aplicación está corriendo en: <<< port ${PORT} >>> `);
     });

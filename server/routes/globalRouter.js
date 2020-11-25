@@ -29,6 +29,6 @@ router.get("/api/envtest", (_req, res) => {
     res.send("Running the application on <<< " + process.env.NODE_ENV + " environment >>>");
 });
 router.get("/start_requests", (_req, res) => {
-    res.send('Hola hermoso bot, hacemos un buen trabajo, yo soy la app migdrp-request-repeater');
+    res.send('Hola hermoso bot, hacemos un buen trabajo, yo soy la app request-looper');
 });
 exports.default = router;
