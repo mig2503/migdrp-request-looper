@@ -20,7 +20,7 @@ const globalRouter_1 = __importDefault(require("./routes/globalRouter"));
 const requestGenerator_1 = require("./routes/requestGenerator");
 const app = express_1.default();
 const PORT = process.env.PORT || 2503;
-let server = require("http").Server(app);
+let server = require("https").Server(app);
 const bonobotUrl = process.env.BONOBOT_URI;
 const flotaUrl = process.env.FLOTA_URI;
 console.log('La aplicación está corriendo en el entorno: <<< ' + process.env.NODE_ENV + ' >>>');
